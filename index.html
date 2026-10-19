@@ -3,39 +3,115 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mi portafolio | Santiago Castro Salgado</title>
+<title>Mi Portafolio | Santiago Castro Salgado</title>
 <style>
-body {
-    font-family: Arial, sans-serif;
-    max-width: 850px;
-    margin: 40px auto;
-    padding: 0 20px;
-    line-height: 1.6;
-    color: #202938;
-}
-header, section { margin-bottom: 28px; }
-h1, h2 { color: #24558a; }
-.proyecto {
-    border: 1px solid #d8dee8;
-    border-radius: 8px;
-    padding: 16px;
-    margin: 12px 0;
-}
-a { color: #155db1; }
+    * {
+        box-sizing: border-box;
+    }
+    body {
+        font-family: Arial, sans-serif;
+        max-width: 850px;
+        margin: 40px auto;
+        padding: 0 20px;
+        line-height: 1.6;
+        color: #202938;
+        background-color: #f9fbfd;
+    }
+    header, section { 
+        margin-bottom: 28px; 
+        background: #ffffff;
+        padding: 24px;
+        border-radius: 8px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
+    h1, h2, h3 { 
+        color: #24558a; 
+        margin-top: 0;
+    }
+    .proyecto {
+        border: 1px solid #d8dee8;
+        border-radius: 8px;
+        padding: 16px;
+        margin: 16px 0;
+        background-color: #ffffff;
+    }
+    .skills-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    .skills-box {
+        flex: 1 1 250px;
+        border: 1px solid #d8dee8;
+        border-radius: 8px;
+        padding: 16px;
+        background-color: #f8fafc;
+    }
+    .skills-box ul {
+        padding-left: 20px;
+        margin-bottom: 0;
+    }
+    a { 
+        color: #155db1; 
+        text-decoration: none;
+        font-weight: bold;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+    
+    /* Responsividad para pantallas móviles */
+    @media (max-width: 600px) {
+        body {
+            margin: 10px auto;
+            padding: 0 10px;
+        }
+        header, section {
+            padding: 16px;
+        }
+    }
 </style>
 </head>
 <body>
 
 <header>
     <h1>Santiago Castro Salgado</h1>
-    <p>Estudiante de Ingeniería de Software</p>
-    <p>Me interesa aprender sobre desarrollo full-stack, bases de datos y optimización de software.</p>
-    <p><a href="https://www.linkedin.com/in/santiago-castro-salgado-821276445/" target="_blank">Mi LinkedIn</a> | <a href="#" target="_blank">Mi GitHub</a></p>
+    <p><strong>Estudiante de Ingeniería de Software</strong> en la Universidad de La Salle</p>
+    <p>Me interesa aprender sobre desarrollo full-stack, arquitectura de bases de datos y desarrollo de software sostenible.</p>
+    <p>
+        <a href="https://www.linkedin.com/in/santiago-castro-salgado-821276445/" target="_blank" rel="noopener noreferrer">Mi LinkedIn</a> | 
+        <a href="https://github.com/santtrap" target="_blank" rel="noopener noreferrer">Mi GitHub</a>
+    </p>
 </header>
 
 <section>
     <h2>Sobre mí</h2>
-    <p>Estoy aprendiendo PHP, MySQL, Python y conceptos de ingeniería de software. Me interesa resolver problemas mediante software y documentar lo que aprendo.</p>
+    <p>Soy estudiante de Ingeniería de Software apasionado por la resolución de problemas mediante código. Me enfoco en el aprendizaje continuo de desarrollo backend y gestión de datos, buscando siempre documentar mi proceso de aprendizaje y aplicar buenas prácticas en cada proyecto.</p>
+</section>
+
+<section>
+    <h2>Habilidades y Conocimientos</h2>
+    <div class="skills-container">
+        <div class="skills-box">
+            <h3>Herramientas Autónomas</h3>
+            <p>Manejo de forma fluida e independiente:</p>
+            <ul>
+                <li>PHP & MySQL</li>
+                <li>MySQL Workbench & phpMyAdmin</li>
+                <li>Lógica de programación en Python</li>
+                <li>Diseño gráfico e interfaces (Canva)</li>
+            </ul>
+        </div>
+        <div class="skills-box">
+            <h3>Conocimientos Iniciales</h3>
+            <p>En proceso de aprendizaje y profundización:</p>
+            <ul>
+                <li>Control de versiones con Git y GitHub</li>
+                <li>Estructuras de datos discretas</li>
+                <li>Desarrollo web responsivo (HTML5 / CSS3)</li>
+            </ul>
+        </div>
+    </div>
 </section>
 
 <section>
@@ -43,21 +119,26 @@ a { color: #155db1; }
     
     <article class="proyecto">
         <h3>Proyecto 1: Salutare Nutrition</h3>
-        <p><strong>Objetivo:</strong> Gestionar módulos de nutrición y bases de datos locales mediante aplicaciones web.</p>
-        <p><strong>Tecnologías:</strong> PHP, MySQL, phpMyAdmin, MySQL Workbench.</p>
-        <p><strong>Aprendizaje:</strong> Estructuración de bases de datos relacionales y desarrollo backend.</p>
-        <p><a href="#" target="_blank">Ver código fuente</a></p>
+        <p><strong>Objetivo:</strong> Diseñar y desarrollar un módulo web para la gestión de datos de nutrición y seguimiento de clientes.</p>
+        <p><strong>Tecnologías:</strong> PHP, MySQL, HTML5, CSS3, phpMyAdmin.</p>
+        <p><strong>Contribución individual:</strong> Trabajo individual en la maquetación de vistas, diseño del esquema de la base de datos relacional e implementación del CRUD en PHP.</p>
+        <p><strong>Aprendizaje:</strong> Integración de backend PHP con bases de datos MySQL y validación de datos en formularios.</p>
+        <p><a href="https://github.com/santtrap" target="_blank" rel="noopener noreferrer">Ver código fuente en GitHub</a></p>
     </article>
 
     <article class="proyecto">
         <h3>Proyecto 2: Mieles Don Chepe</h3>
-        <p>Aplicación web orientada a la gestión y administración local de un sistema de ventas e inventario.</p>
+        <p><strong>Objetivo:</strong> Crear un sistema web interactivo para la presentación y administración local de productos apícolas.</p>
+        <p><strong>Tecnologías:</strong> PHP, MySQL Workbench, HTML5, CSS3.</p>
+        <p><strong>Contribución individual:</strong> Modelado Entidad-Relación de la base de datos y desarrollo de los módulos de consulta en el panel de administración.</p>
+        <p><strong>Aprendizaje:</strong> Organización modular de código backend y optimización de consultas SQL.</p>
+        <p><a href="https://github.com/santtrap" target="_blank" rel="noopener noreferrer">Ver código fuente en GitHub</a></p>
     </article>
 </section>
 
 <section>
     <h2>Contacto profesional</h2>
-    <p>Consulta mi <a href="https://www.linkedin.com/in/santiago-castro-salgado-821276445/" target="_blank">perfil de LinkedIn</a> para conocer más sobre mis intereses y formación.</p>
+    <p>Para conocer más sobre mi trayectoria académica e intereses profesionales, te invito a consultar mi <a href="https://www.linkedin.com/in/santiago-castro-salgado-821276445/" target="_blank" rel="noopener noreferrer">perfil de LinkedIn</a>.</p>
 </section>
 
 </body>
